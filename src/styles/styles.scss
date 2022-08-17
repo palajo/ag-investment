@@ -1,0 +1,30 @@
+// libraries
+@import './libraries/bootstrap/bootstrap';
+@import './libraries/swiper/swiper';
+
+// fonts, constants
+@import './fonts';
+@import './const';
+
+// global
+@import './global';
+
+// header
+@import './components/general/header/header';
+
+// footer
+@import './components/general/footer/footer';
+
+// form
+@import './components/general/form/form';
+
+// modals
+@import './components/general/modal/modal';
+
+// -- -- -- -- -- homepage
+// -- sections
+@import './components/pages/homepage/sections/hero-banner';
+
+// -- blocks
+@import './components/pages/homepage/blocks/vacancy';
+
