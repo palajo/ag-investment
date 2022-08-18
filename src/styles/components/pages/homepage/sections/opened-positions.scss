@@ -1,0 +1,37 @@
+section.opened-positions {
+  .title-row {
+    margin-bottom: 30px;
+  }
+
+  .vacancies-slider-arrows {
+    display: flex;
+    flex-direction: row;
+
+    .arrow-button {
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+
+      border-radius: 5px;
+      border: none;
+      outline: none;
+
+      transition: 0.2s ease;
+
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .swiper.vacancies-slider {
+
+  }
+}

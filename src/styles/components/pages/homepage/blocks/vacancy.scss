@@ -1,0 +1,39 @@
+.vacancy-block {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  border: 1px solid $lightgray;
+
+  .block-title {
+    display: flex;
+    align-items: center;
+
+    .block-icon {
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .block-description {
+    margin-top: 30px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .block-action {
+    margin-top: 30px;
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

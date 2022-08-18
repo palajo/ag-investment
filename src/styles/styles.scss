@@ -24,7 +24,13 @@
 // -- -- -- -- -- homepage
 // -- sections
 @import './components/pages/homepage/sections/hero-banner';
+@import './components/pages/homepage/sections/opened-positions';
+@import './components/pages/homepage/sections/wide-slider';
+@import './components/pages/homepage/sections/double-section';
+@import './components/pages/homepage/sections/contacts';
 
 // -- blocks
 @import './components/pages/homepage/blocks/vacancy';
+@import './components/pages/homepage/blocks/step';
+@import './components/pages/homepage/blocks/contacts';
 

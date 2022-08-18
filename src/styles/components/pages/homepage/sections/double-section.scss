@@ -1,0 +1,55 @@
+section.double-section {
+  padding: 70px 0;
+
+  button {
+    margin: 50px 0 0;
+  }
+
+  a.link-with-arrow {
+    margin: 40px 0 0;
+  }
+
+  .about-us {
+    margin-bottom: 70px;
+
+    p {
+      max-width: 640px;
+      margin: 40px 0 0;
+    }
+  }
+
+  .partners {
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    .swiper.partners-slider {
+      max-width: 640px;
+      margin-left: 0;
+
+      .swiper-slide {
+        position: relative;
+        height: 60px;
+
+        filter: grayscale(1);
+        opacity: 0.35;
+
+        transition: 0.2s ease;
+
+        &:hover {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .employment {
+    .steps {
+      margin-top: 40px;
+
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

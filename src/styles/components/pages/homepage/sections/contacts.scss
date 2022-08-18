@@ -1,0 +1,25 @@
+section.contacts {
+  padding-bottom: 70px;
+
+  .contacts-container {
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+    padding: 40px;
+
+    .contacts-blocks {
+      margin-top: 40px;
+    }
+
+    button {
+      margin: 70px 0 0;
+    }
+
+    .map-block {
+      position: relative;
+
+      height: 500px;
+      width: 100%;
+    }
+  }
+}

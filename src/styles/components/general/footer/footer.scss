@@ -1,0 +1,41 @@
+footer {
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  width: 100%;
+  padding: 50px 0;
+
+  background: $asphalt;
+  color: $white;
+
+  hr {
+    margin: 50px 0 20px 0;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  p.copyright {
+    font-size: 12px;
+  }
+
+  .contacts-block {
+    .block-icon {
+      background: rgba(255, 255, 255, 0.1);
+
+      img {
+        filter: invert(1);
+      }
+    }
+
+    .block-title {
+      a {
+        color: $white;
+
+        &:hover {
+          color: $lightgray;
+        }
+      }
+    }
+  }
+}
