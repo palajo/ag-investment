@@ -23,3 +23,17 @@ section.wide-slider {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  section.wide-slider {
+    p {
+      margin: 30px auto 40px;
+    }
+
+    .swiper.homepage-slider {
+      .swiper-slide {
+        height: 250px;
+      }
+    }
+  }
+}

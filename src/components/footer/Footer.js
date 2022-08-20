@@ -11,7 +11,7 @@ function Footer() {
   return (
     <footer>
       <Container>
-        <Row className="justify-content-between">
+        <Row className="justify-content-between gy-5">
           <Col xs="auto">
             <Link href="/">
               <a>

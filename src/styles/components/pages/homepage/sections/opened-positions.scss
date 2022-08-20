@@ -30,8 +30,12 @@ section.opened-positions {
       }
     }
   }
+}
 
-  .swiper.vacancies-slider {
-
+@media screen and (max-width: 767px) {
+  section.opened-positions {
+    .title-row {
+      margin-bottom: 20px;
+    }
   }
 }

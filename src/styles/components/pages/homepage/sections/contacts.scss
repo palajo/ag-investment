@@ -23,3 +23,26 @@ section.contacts {
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  section.contacts {
+    padding-bottom: 50px;
+
+    .contacts-container {
+      padding: 30px;
+
+      .contacts-blocks {
+        margin-top: 30px;
+      }
+
+      button {
+        margin: 50px 0 0;
+      }
+
+      .map-block {
+        margin-top: 50px;
+        height: 300px;
+      }
+    }
+  }
+}

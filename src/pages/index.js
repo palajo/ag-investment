@@ -84,9 +84,20 @@ export default function Home() {
                 <Swiper
                   ref={sliderRef}
                   spaceBetween={15}
-                  slidesPerView={4}
+                  slidesPerView={1.5}
                   speed={800}
                   className="vacancies-slider"
+                  breakpoints={{
+                    768: {
+                      slidesPerView: 2,
+                    },
+                    1080: {
+                      slidesPerView: 3,
+                    },
+                    1440: {
+                      slidesPerView: 4,
+                    },
+                  }}
                 >
                   {
                     _.times(6, () => (
