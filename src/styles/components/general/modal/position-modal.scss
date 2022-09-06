@@ -1,0 +1,130 @@
+.modal {
+  &.position-modal {
+    .modal-dialog {
+      max-width: 960px;
+
+      .modal-content {
+        .modal-body {
+          p {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.position-modal-block {
+  display: flex;
+  flex-direction: column;
+
+  .block-title {
+    display: flex;
+    align-items: center;
+
+    .block-icon {
+      position: relative;
+
+      flex-shrink: 0;
+      margin-right: 15px;
+
+      width: 48px;
+      height: 48px;
+    }
+
+    .block-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: $black;
+    }
+  }
+
+  .block-benefits {
+    margin-top: 20px;
+
+    .benefit-block {
+      display: flex;
+      align-items: center;
+
+      padding: 0 10px;
+      height: 30px;
+
+      background: #f8f8f8;
+
+      .block-icon {
+        display: flex;
+        align-items: center;
+
+        margin-right: 10px;
+      }
+
+      .block-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: $black;
+      }
+    }
+  }
+
+  .block-description {
+    margin-top: 40px;
+
+    p {
+      max-width: 720px;
+    }
+  }
+
+  .block-requirements {
+    margin-top: 40px;
+
+    .block-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: $black;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      margin: 15px 0 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        font-size: 16px;
+        color: $black;
+
+        padding: 4px 0;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          flex-shrink: 0;
+
+          width: 14px;
+          height: 14px;
+
+          margin-right: 15px;
+
+          background-color: $black;
+
+          mask-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_23_9)'%3E%3Cpath d='M9 11L13 7M13 7L9 3M13 7L1 7' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_9'%3E%3Crect width='14' height='14' fill='white' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 14 14)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+          mask-size: contain;
+          mask-position: left;
+          mask-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  .block-actions {
+    margin-top: 40px;
+  }
+}

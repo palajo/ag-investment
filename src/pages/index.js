@@ -5,17 +5,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import _ from 'lodash';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useCallback, useRef } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 
 import Electrician from '../images/icons/jobs/electrician.svg';
 import SliderImage from '../images/slider/placeholder.jpg';
-import SliderArrowLeft from '../images/icons/slider-arrow-left.svg';
-import SliderArrowRight from '../images/icons/slider-arrow-right.svg';
 import PhoneIcon from '../images/icons/phone.svg';
 import EmailIcon from '../images/icons/email.svg';
 import LocationIcon from '../images/icons/location.svg';
 import PartnerImage from '../images/partners/placeholder.png';
 import MapPlaceholder from '../images/map/placeholder.jpg';
+
+// modals
+import ApplyModal from '../components/modals/ApplyModal';
+import ElectricianModal from '../components/modals/positions/ElectricianModal';
 
 export default function Home() {
   // swiper arrows
@@ -31,6 +33,27 @@ export default function Home() {
     sliderRef.current.swiper.slideNext();
     console.log(sliderRef);
   }, []);
+
+  // opened position
+  const positionsSection = useRef();
+  const [showPositions, setShowPositions] = useState(2);
+
+  const handleShowAllPositions = (quantity) => {
+    if (showPositions > 2) {
+      setShowPositions(2);
+      positionsSection.current.scrollIntoView();
+
+    } else {
+      setShowPositions(quantity)
+    }
+  };
+
+  // about us
+  const [showAllText, setShowAllText] = useState(false);
+
+  const handleShowAllText = () => {
+    return showAllText ? setShowAllText(false) : setShowAllText(true);
+  }
 
   return (
     <>
@@ -51,84 +74,100 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore
                   et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
-                <button className="btn btn-primary">
-                  Apply for position
-                </button>
+                <Link href="/apply">
+                  <button className="btn btn-primary">
+                    Apply for position
+                  </button>
+                </Link>
               </Col>
             </Row>
           </Container>
         </section>
-        <section className="opened-positions">
+        <section className="opened-positions" ref={positionsSection}>
           <Container>
-            <Row>
-              <Col xs={12}>
+            <Row className="justify-content-center">
+              <Col lg={8}>
                 <Row className="title-row justify-content-between align-items-center">
                   <Col xs="auto">
                     <h4>
                       Opened positions
                     </h4>
                   </Col>
-                  <Col xs="auto">
-                    <div className="vacancies-slider-arrows">
-                      <div className="arrow-button" onClick={handlePrev}>
-                        <Image src={SliderArrowLeft} width={18} height={18} alt="Arrow Left Icon"/>
-                      </div>
-                      <div className="arrow-button" onClick={handleNext}>
-                        <Image src={SliderArrowRight} width={18} height={18} alt="Arrow Right Icon"/>
-                      </div>
-                    </div>
-                  </Col>
                 </Row>
               </Col>
-              <Col xs={12}>
-                <Swiper
-                  ref={sliderRef}
-                  spaceBetween={15}
-                  slidesPerView={1.5}
-                  speed={800}
-                  className="vacancies-slider"
-                  breakpoints={{
-                    768: {
-                      slidesPerView: 2,
-                    },
-                    1080: {
-                      slidesPerView: 3,
-                    },
-                    1440: {
-                      slidesPerView: 4,
-                    },
-                  }}
-                >
+              <Col lg={8}>
+                <Row className="gy-4">
                   {
-                    _.times(6, () => (
-                      <SwiperSlide>
-                        <div className="vacancy-block">
+                    _.times(8, () => (
+                      <Col xs={12}>
+                        <div className="position-block">
                           <div className="block-title">
                             <div className="block-icon">
-                              <Image src={Electrician} alt="AK Invsetment – Electrician Icon" width={48} height={48}/>
+                              <Image src={Electrician} width={48} height={48} alt="AK Investment – Electrician Icon"/>
                             </div>
-                            <Link href="#">
+                            <div className="block-name">
                               Electrician
-                            </Link>
+                            </div>
+                          </div>
+                          <div className="block-benefits">
+                            <Row>
+                              <Col xs="auto">
+                                <div className="benefit-block">
+                                  <div className="block-icon">
+                                    <Image src={LocationIcon} width={14} height={14}
+                                           alt="AK Investment – Location Icon"/>
+                                  </div>
+                                  <div className="block-title">
+                                    Poland, Gdasnk
+                                  </div>
+                                </div>
+                              </Col>
+                              <Col xs="auto">
+                                <div className="benefit-block">
+                                  <div className="block-icon">
+                                    <Image src={LocationIcon} width={14} height={14}
+                                           alt="AK Investment – Location Icon"/>
+                                  </div>
+                                  <div className="block-title">
+                                    15 zl/hr
+                                  </div>
+                                </div>
+                              </Col>
+                            </Row>
                           </div>
                           <div className="block-description">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                              ut labore.
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque nesciunt
+                              voluptate
+                              voluptatibus. Adipisci at autem dolores exercitationem iure libero modi reiciendis tempora
+                              voluptates voluptatum? Eaque ex placeat porro quaerat.
                             </p>
+                            <ElectricianModal />
                           </div>
-                          <div className="block-action">
-                            <Link href="#">
-                              <a className="link-with-arrow">
-                                Read more
-                              </a>
+                          <div className="block-actions">
+                            <Link href="/apply">
+                              <button className="btn btn-primary">
+                                Apply
+                              </button>
                             </Link>
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))
+                      </Col>
+                    )).slice(0, showPositions)
                   }
-                </Swiper>
+                </Row>
+              </Col>
+              <Col xs={12}>
+                <Row className="actions-row justify-content-center">
+                  <Col xs="auto">
+                    <button
+                      className={`btn btn-primary ${showPositions > 2 ? `btn-arrow-up` : `btn-arrow-down`}`}
+                      onClick={() => handleShowAllPositions(8)}
+                    >
+                      {showPositions > 2 ? `Show Less` : `Show More`}
+                    </button>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
@@ -175,17 +214,39 @@ export default function Home() {
                     <h3>
                       Who we are?
                     </h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat.<br /><br />
+                    {
+                      !showAllText ? (
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                          ut aliquip ex ea commodo consequat.<br/><br/>
 
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                      laborum.
-                    </p>
-                    <a href="#" className="link-with-arrow arrow-down">
-                      Read more
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                          id est laborum.
+                        </p>
+                      ) : (
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                          ut aliquip ex ea commodo consequat.<br/><br/>
+
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                          id est laborum.<br/><br/>
+
+                          Aliquam nulla facilisi cras fermentum odio eu feugiat. Duis ut diam  quam nulla porttitor massa id neque.
+                          Ac orci phasellus egestas tellus. Vitae suscipit tellus mauris a diam maecenas sed enim ut.
+                          Pellentesque diam volutpat commodo sed egestas egestas  fringilla. Eu mi bibendum neque egestas
+                          congue quisque. Odio eu feugiat pretium nibh ipsum consequat nisl vel.
+                        </p>
+                      )
+                    }
+                    <a
+                      className={`link-with-arrow ${showAllText ? `arrow-up` : `arrow-down`}`}
+                      onClick={() => handleShowAllText()}
+                    >
+                      {showAllText ? `Hide` : `Read More`}
                     </a>
                   </Col>
                   <Col xs={12} className="partners">
@@ -202,7 +263,7 @@ export default function Home() {
                         _.times(4, () => (
                           <SwiperSlide>
                             <Image src={PartnerImage} layout="fill" objectFit="contain" objectPosition="left"
-                                   alt="AK Investment – Partner Placeholder" />
+                                   alt="AK Investment – Partner Placeholder"/>
                           </SwiperSlide>
                         ))
                       }
@@ -211,116 +272,150 @@ export default function Home() {
                 </Row>
               </Col>
               <Col lg={4} className="employment">
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <section className="steps">
+          <Container>
+            <Row>
+              <Col xs={12}>
                 <h3>
                   Employment steps
                 </h3>
-                <div className="steps">
-                  <div className="step-block">
-                    <div className="block-number">
-                      1
-                    </div>
-                    <div className="block-content">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+                <Row className="justify-content-between gx-0 gy-5 gy-lg-0">
+                  <Col lg={3}>
+                    <div className="step-block first-child">
+                      <div className="block-number">
+                        1
+                      </div>
                       <div className="block-title">
                         Application
                       </div>
-                      <div className="block-description">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
+                    </div>
+                  </Col>
+                  <Col lg={3}>
+                    <div className="step-block">
+                      <div className="block-number">
+                        2
                       </div>
-                    </div>
-                  </div>
-                  <div className="step-block">
-                    <div className="block-number">
-                      2
-                    </div>
-                    <div className="block-content">
                       <div className="block-title">
-                        Gathering required documents
-                      </div>
-                      <div className="block-description">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
+                        Interview with HR
                       </div>
                     </div>
-                  </div>
-                  <div className="step-block">
-                    <div className="block-number">
-                      3
-                    </div>
-                    <div className="block-content">
+                  </Col>
+                  <Col lg={3}>
+                    <div className="step-block">
+                      <div className="block-number">
+                        3
+                      </div>
                       <div className="block-title">
-                        Happy employment
-                      </div>
-                      <div className="block-description">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
+                        Preparing documents
                       </div>
                     </div>
-                  </div>
-                </div>
-                <button className="btn btn-primary">
-                  Apply for position
-                </button>
+                  </Col>
+                  <Col lg={3}>
+                    <div className="step-block last-child">
+                      <div className="block-number">
+                        4
+                      </div>
+                      <div className="block-title">
+                        Employment
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
         </section>
         <section className="contacts">
           <Container>
-            <Row>
-              <Col xs={12}>
-                <div className="contacts-container">
-                  <Row className="align-items-center">
-                    <Col lg={6}>
-                      <h3>
-                        Contacts
-                      </h3>
-                      <div className="contacts-blocks">
-                        <div className="contacts-block">
-                          <div className="block-icon">
-                            <Image src={PhoneIcon} width={18} height={18} alt="AK Investment – Phone Icon" />
-                          </div>
-                          <div className="block-title">
-                            <Link href="tel:+38 (000) 00 00 000">
-                              +38 (000) 00 00 000
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="contacts-block">
-                          <div className="block-icon">
-                            <Image src={EmailIcon} width={18} height={18} alt="AK Investment – Email Icon" />
-                          </div>
-                          <div className="block-title">
-                            <Link href="mailto:careers@ak-investment.com">
-                              careers@ak-investment.com
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="contacts-block">
-                          <div className="block-icon">
-                            <Image src={LocationIcon} width={18} height={18} alt="AK Investment – Location Icon" />
-                          </div>
-                          <div className="block-title">
-                            <Link href="#">
-                              Gdansk, Poland
-                            </Link>
-                          </div>
-                        </div>
+            <Row className="gy-5">
+              <Col lg={7}>
+                <div className="shadow-container">
+                  <h3>
+                    Contacts
+                  </h3>
+                  <div className="contacts-blocks">
+                    <div className="contacts-block">
+                      <div className="block-icon">
+                        <Image src={PhoneIcon} width={18} height={18} alt="AK Investment – Phone Icon"/>
                       </div>
-                      <button className="btn btn-primary">
-                        Callback
-                      </button>
-                    </Col>
-                    <Col lg={6}>
-                      <div className="map-block">
-                        <Image src={MapPlaceholder} layout="fill" objectFit="cover" objectPosition="center"
-                               alt="AK Investment – Map Placeholder" />
+                      <div className="block-title">
+                        <Link href="tel:+38 (000) 00 00 000">
+                          +38 (000) 00 00 000
+                        </Link>
                       </div>
-                    </Col>
-                  </Row>
+                    </div>
+                    <div className="contacts-block">
+                      <div className="block-icon">
+                        <Image src={EmailIcon} width={18} height={18} alt="AK Investment – Email Icon"/>
+                      </div>
+                      <div className="block-title">
+                        <Link href="mailto:careers@ak-investment.com">
+                          careers@ak-investment.com
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="contacts-block">
+                      <div className="block-icon">
+                        <Image src={LocationIcon} width={18} height={18} alt="AK Investment – Location Icon"/>
+                      </div>
+                      <div className="block-title">
+                        <Link href="#">
+                          Gdansk, Poland
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="map-block">
+                    <Image src={MapPlaceholder} layout="fill" objectFit="cover" objectPosition="center"
+                           alt="AK Investment – Map Placeholder"/>
+                  </div>
+                </div>
+              </Col>
+              <Col lg={5}>
+                <div className="shadow-container">
+                  <h3>
+                    Callback
+                  </h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                  </p>
+                  <form action="#">
+                    <Row className="gy-4">
+                      <Col xs={12}>
+                        <label htmlFor="name">
+                          Full name
+                        </label>
+                        <input type="text" className="form-control" name="name" placeholder="Alexander McKinsey"/>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="email">
+                          E-mail
+                        </label>
+                        <input type="text" className="form-control" name="email"
+                               placeholder="careers@ak-inverstment.pl"/>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="phone">
+                          Contact phone
+                        </label>
+                        <input type="text" className="form-control" name="phone" placeholder="+38 (000) 00 00 000"/>
+                      </Col>
+                      <Col xs={12}>
+                        <button className="btn btn-primary">
+                          Submit
+                        </button>
+                      </Col>
+                    </Row>
+                  </form>
                 </div>
               </Col>
             </Row>

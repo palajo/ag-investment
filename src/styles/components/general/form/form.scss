@@ -1,0 +1,38 @@
+form {
+  label {
+    font-size: 14px;
+    color: $gray;
+  }
+
+  .form-control,
+  .form-select {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $lightgray;
+
+    height: 50px;
+    padding: 0;
+
+    font-weight: 500;
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-color: $black;
+    }
+  }
+
+  .form-file {
+    margin-top: 8px;
+
+    height: auto;
+    padding: 5px 10px;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}

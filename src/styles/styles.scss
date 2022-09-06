@@ -20,6 +20,7 @@
 
 // modals
 @import './components/general/modal/modal';
+@import './components/general/modal/position-modal';
 
 // -- -- -- -- -- homepage
 // -- sections
@@ -27,10 +28,15 @@
 @import './components/pages/homepage/sections/opened-positions';
 @import './components/pages/homepage/sections/wide-slider';
 @import './components/pages/homepage/sections/double-section';
+@import './components/pages/homepage/sections/steps';
 @import './components/pages/homepage/sections/contacts';
 
 // -- blocks
 @import './components/pages/homepage/blocks/vacancy';
 @import './components/pages/homepage/blocks/step';
 @import './components/pages/homepage/blocks/contacts';
+@import './components/pages/homepage/blocks/position';
 
+// -- -- -- -- -- apply
+// -- sections
+@import './components/pages/apply/sections/application';
