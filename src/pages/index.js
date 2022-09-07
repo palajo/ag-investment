@@ -113,7 +113,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="block-benefits">
-                            <Row>
+                            <Row className="gy-3">
                               <Col xs="auto">
                                 <div className="benefit-block">
                                   <div className="block-icon">
