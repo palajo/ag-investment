@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Logo from '../../images/logo.svg';
+import Logo from '../../images/logo-2.svg';
 
 function Header() {
   return (
@@ -13,11 +13,11 @@ function Header() {
           <Col xs="auto">
             <Link href="/">
               <a>
-                <Image src={Logo} alt="AK Investment – Logo" />
+                <Image src={Logo} alt="AK Investment – Logo" height={72} objectFit="contain" objectPosition="left" />
               </a>
             </Link>
           </Col>
-          <Col xs="auto">
+          <Col xs="auto" className="d-none d-lg-block">
             <ul className="header-contacts">
               <li>
                 <Link href="#">
@@ -25,13 +25,13 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="tel:+38 (000) 00 00 000">
-                  +38 (000) 00 00 000
+                <Link href="tel:+48 (739) 441 878">
+                  +48 (739) 441 878
                 </Link>
               </li>
               <li>
-                <Link href="mailto:careers@ak-investment.com">
-                  careers@ak-investment.com
+                <Link href="mailto:akinvestpolka@gmail.com">
+                  akinvestpolka@gmail.com
                 </Link>
               </li>
             </ul>

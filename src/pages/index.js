@@ -8,15 +8,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useCallback, useRef, useState } from 'react';
 
 import Electrician from '../images/icons/jobs/electrician.svg';
-import SliderImage from '../images/slider/placeholder.jpg';
 import PhoneIcon from '../images/icons/phone.svg';
 import EmailIcon from '../images/icons/email.svg';
 import LocationIcon from '../images/icons/location.svg';
 import PartnerImage from '../images/partners/placeholder.png';
+import SlideImage1 from '../images/slider/slide-1.jpeg';
+import SlideImage2 from '../images/slider/slide-2.jpeg';
+import SlideImage3 from '../images/slider/slide-3.jpeg';
+import SlideImage4 from '../images/slider/slide-4.jpeg';
+
 import MapPlaceholder from '../images/map/placeholder.jpg';
 
 // modals
-import ApplyModal from '../components/modals/ApplyModal';
 import ElectricianModal from '../components/modals/positions/ElectricianModal';
 
 export default function Home() {
@@ -197,8 +200,20 @@ export default function Home() {
                   className="homepage-slider"
                 >
                   <SwiperSlide>
-                    <Image src={SliderImage} layout="fill" objectFit="cover" objectPosition="center"
-                           alt="AK Investment – Slider Image 1"/>
+                    <Image src={SlideImage4} layout="fill" objectFit="cover" objectPosition="center"
+                           alt="AK Investment"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image src={SlideImage1} layout="fill" objectFit="cover" objectPosition="center"
+                           alt="AK Investment"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image src={SlideImage2} layout="fill" objectFit="cover" objectPosition="center"
+                           alt="AK Investment"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Image src={SlideImage3} layout="fill" objectFit="cover" objectPosition="center"
+                           alt="AK Investment"/>
                   </SwiperSlide>
                 </Swiper>
               </Col>
@@ -347,8 +362,8 @@ export default function Home() {
                         <Image src={PhoneIcon} width={18} height={18} alt="AK Investment – Phone Icon"/>
                       </div>
                       <div className="block-title">
-                        <Link href="tel:+38 (000) 00 00 000">
-                          +38 (000) 00 00 000
+                        <Link href="tel:+48 (739) 441 878">
+                          +48 (739) 441 878
                         </Link>
                       </div>
                     </div>
@@ -357,8 +372,8 @@ export default function Home() {
                         <Image src={EmailIcon} width={18} height={18} alt="AK Investment – Email Icon"/>
                       </div>
                       <div className="block-title">
-                        <Link href="mailto:careers@ak-investment.com">
-                          careers@ak-investment.com
+                        <Link href="mailto:akinvestpolka@gmail.com">
+                          akinvestpolka@gmail.com
                         </Link>
                       </div>
                     </div>

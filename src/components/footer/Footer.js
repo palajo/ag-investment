@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import LogoWhite from '../../images/logo-white.svg';
+import LogoWhite from '../../images/logo-2-white.svg';
 import PhoneIcon from '../../images/icons/phone.svg';
 import EmailIcon from '../../images/icons/email.svg';
 
@@ -15,7 +15,7 @@ function Footer() {
           <Col xs="auto">
             <Link href="/">
               <a>
-                <Image src={LogoWhite} alt="AK Investment – Logo" />
+                <Image src={LogoWhite} alt="AK Investment – Logo" height={72} objectFit="contain" objectPosition="left" />
               </a>
             </Link>
           </Col>
