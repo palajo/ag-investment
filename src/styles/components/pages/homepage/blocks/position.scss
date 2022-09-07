@@ -81,3 +81,14 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .position-block {
+    padding: 20px 20px 80px 20px;
+
+    .block-actions {
+      top: auto;
+      bottom: 20px;
+    }
+  }
+}
