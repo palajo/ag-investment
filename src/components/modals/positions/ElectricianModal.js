@@ -15,7 +15,7 @@ function ElectricianModal(props) {
   return (
     <>
       <a className="link-with-arrow arrow-down" onClick={handleShow}>
-        In details
+        В деталях
       </a>
       <Modal className="position-modal" show={show} onHide={handleClose} centered>
         <Modal.Header closeButton/>
@@ -26,7 +26,7 @@ function ElectricianModal(props) {
                 <Image src={Electrician} width={48} height={48} alt="AK Investment – Electrician Icon"/>
               </div>
               <div className="block-name">
-                Electrician
+                Електрик
               </div>
             </div>
             <div className="block-benefits">
@@ -38,7 +38,7 @@ function ElectricianModal(props) {
                              alt="AK Investment – Location Icon"/>
                     </div>
                     <div className="block-title">
-                      Poland, Gdasnk
+                      Польща, Гданськ
                     </div>
                   </div>
                 </Col>
@@ -49,7 +49,7 @@ function ElectricianModal(props) {
                              alt="AK Investment – Location Icon"/>
                     </div>
                     <div className="block-title">
-                      15 zl/hr
+                      20-25 злотих /год.
                     </div>
                   </div>
                 </Col>
@@ -57,44 +57,36 @@ function ElectricianModal(props) {
             </div>
             <div className="block-description">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eaque et illum iure neque perspiciatis
-                saepe voluptas? Deleniti, ea nobis! Corporis dolorum facilis itaque laboriosam laborum magnam
-                necessitatibus repellendus voluptates.<br /><br/>
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eaque et illum iure neque perspiciatis
-                saepe voluptas? Deleniti, ea nobis! Corporis dolorum facilis itaque laboriosam laborum magnam
-                necessitatibus repellendus voluptates.
+                Робота електриком на виробництві кораблів-катамаранів.<br />
+                Стака залежить від рівню знань, досвід роботи та вміння читати креслення обов&apos;язкові.
               </p>
             </div>
             <div className="block-requirements">
               <div className="block-title">
-                Benefits
+                Ми пропонуємо
               </div>
               <ul className="requirements-list">
                 <li>
-                  Punct numero uno
+                  Вчасну вилпати заробітної плати
                 </li>
                 <li>
-                  Punct numero duo
+                  Стабільний графік роботи
                 </li>
                 <li>
-                  Punct numero tres
+                  Допомогу з житлом (за необхідності)
                 </li>
               </ul>
             </div>
             <div className="block-requirements">
               <div className="block-title">
-                Requirements
+                Вимоги
               </div>
               <ul className="requirements-list">
                 <li>
-                  Punct numero uno
+                  Довсід роботи
                 </li>
                 <li>
-                  Punct numero duo
-                </li>
-                <li>
-                  Punct numero tres
+                  Вміння читати креслення
                 </li>
               </ul>
             </div>

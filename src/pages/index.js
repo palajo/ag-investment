@@ -71,15 +71,15 @@ export default function Home() {
             <Row>
               <Col xs={12}>
                 <h1>
-                  We are looking for talents!
+                  Ми шукаємо спеціалістів!
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam.
+                  Постійна робота в Польщі (Гданськ). Гарантуємо вчасні виплати, надаємо житло
+                  та допоможемо підготувати всі необхідні документи.
                 </p>
                 <Link href="/apply">
                   <button className="btn btn-primary">
-                    Apply for position
+                    Відгукнутись на вакансію
                   </button>
                 </Link>
               </Col>
@@ -93,7 +93,7 @@ export default function Home() {
                 <Row className="title-row justify-content-between align-items-center">
                   <Col xs="auto">
                     <h4>
-                      Opened positions
+                      Відкриті вакансії
                     </h4>
                   </Col>
                 </Row>
@@ -109,7 +109,7 @@ export default function Home() {
                               <Image src={Electrician} width={48} height={48} alt="AK Investment – Electrician Icon"/>
                             </div>
                             <div className="block-name">
-                              Electrician
+                              Електрик
                             </div>
                           </div>
                           <div className="block-benefits">
@@ -121,7 +121,7 @@ export default function Home() {
                                            alt="AK Investment – Location Icon"/>
                                   </div>
                                   <div className="block-title">
-                                    Poland, Gdasnk
+                                    Польща, Гданськ
                                   </div>
                                 </div>
                               </Col>
@@ -132,7 +132,7 @@ export default function Home() {
                                            alt="AK Investment – Location Icon"/>
                                   </div>
                                   <div className="block-title">
-                                    15 zl/hr
+                                    20-25 злотих /год.
                                   </div>
                                 </div>
                               </Col>
@@ -140,17 +140,15 @@ export default function Home() {
                           </div>
                           <div className="block-description">
                             <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque nesciunt
-                              voluptate
-                              voluptatibus. Adipisci at autem dolores exercitationem iure libero modi reiciendis tempora
-                              voluptates voluptatum? Eaque ex placeat porro quaerat.
+                              Робота електриком на виробництві кораблів-катамаранів.<br />
+                              Стака залежить від рівню знань, досвід роботи та вміння читати креслення обов&apos;язкові.
                             </p>
                             <ElectricianModal />
                           </div>
                           <div className="block-actions">
                             <Link href="/apply">
                               <button className="btn btn-primary">
-                                Apply
+                                Подати заявку
                               </button>
                             </Link>
                           </div>
@@ -167,7 +165,7 @@ export default function Home() {
                       className={`btn btn-primary ${showPositions > 2 ? `btn-arrow-up` : `btn-arrow-down`}`}
                       onClick={() => handleShowAllPositions(8)}
                     >
-                      {showPositions > 2 ? `Show Less` : `Show More`}
+                      {showPositions > 2 ? `Приховати` : `Показати більше`}
                     </button>
                   </Col>
                 </Row>
@@ -180,12 +178,12 @@ export default function Home() {
             <Row>
               <Col xs={12}>
                 <h3>
-                  Timely payments, housing,
-                  comfortable working conditions
+                  Вчасні виплати, житло та
+                  комфортні робочі умови
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam.
+                  Ми дбаємо про наших співробітників, проте бажаємо відповідного ставлення
+                  до виконання своїх обов&apos;язків.
                 </p>
               </Col>
             </Row>
@@ -227,7 +225,7 @@ export default function Home() {
                 <Row>
                   <Col xs={12} className="about-us">
                     <h3>
-                      Who we are?
+                      Про нас
                     </h3>
                     {
                       !showAllText ? (
@@ -261,12 +259,12 @@ export default function Home() {
                       className={`link-with-arrow ${showAllText ? `arrow-up` : `arrow-down`}`}
                       onClick={() => handleShowAllText()}
                     >
-                      {showAllText ? `Hide` : `Read More`}
+                      {showAllText ? `Приховати` : `Показати більше`}
                     </a>
                   </Col>
                   <Col xs={12} className="partners">
                     <h4>
-                      Our partners
+                      Наші партнери
                     </h4>
                     <Swiper
                       spaceBetween={20}
@@ -296,11 +294,10 @@ export default function Home() {
             <Row>
               <Col xs={12}>
                 <h3>
-                  Employment steps
+                  Кроки працевлаштування
                 </h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam.
+                  Ми максимально спростили процес. Всього за 4 кроки ви можете отримати бажану роботу.
                 </p>
                 <Row className="justify-content-between gx-0 gy-5 gy-lg-0">
                   <Col lg={3}>
@@ -309,7 +306,7 @@ export default function Home() {
                         1
                       </div>
                       <div className="block-title">
-                        Application
+                        Подача заявки
                       </div>
                     </div>
                   </Col>
@@ -319,7 +316,7 @@ export default function Home() {
                         2
                       </div>
                       <div className="block-title">
-                        Interview with HR
+                        Інтерв&apos;ю з менеджером
                       </div>
                     </div>
                   </Col>
@@ -329,7 +326,7 @@ export default function Home() {
                         3
                       </div>
                       <div className="block-title">
-                        Preparing documents
+                        Підготовка документів
                       </div>
                     </div>
                   </Col>
@@ -339,7 +336,7 @@ export default function Home() {
                         4
                       </div>
                       <div className="block-title">
-                        Employment
+                        Працевлаштування
                       </div>
                     </div>
                   </Col>
@@ -354,7 +351,7 @@ export default function Home() {
               <Col lg={7}>
                 <div className="shadow-container">
                   <h3>
-                    Contacts
+                    Контакти
                   </h3>
                   <div className="contacts-blocks">
                     <div className="contacts-block">
@@ -383,7 +380,7 @@ export default function Home() {
                       </div>
                       <div className="block-title">
                         <Link href="#">
-                          Gdansk, Poland
+                          Польща, Гданськ
                         </Link>
                       </div>
                     </div>
@@ -397,17 +394,17 @@ export default function Home() {
               <Col lg={5}>
                 <div className="shadow-container">
                   <h3>
-                    Callback
+                    Зворотній виклик
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.
+                    Якщо у вас залишились запитання щодо вакансії чи, можливо, необхідних документів
+                    для працевлаштування – заповніть форму, наш менеджер зв&apos;яжеться з вами.
                   </p>
                   <form action="#">
                     <Row className="gy-4">
                       <Col xs={12}>
                         <label htmlFor="name">
-                          Full name
+                          Повне ім&apos;я
                         </label>
                         <input type="text" className="form-control" name="name" placeholder="Alexander McKinsey"/>
                       </Col>
@@ -420,13 +417,13 @@ export default function Home() {
                       </Col>
                       <Col xs={12}>
                         <label htmlFor="phone">
-                          Contact phone
+                          Контактний телефон
                         </label>
                         <input type="text" className="form-control" name="phone" placeholder="+38 (000) 00 00 000"/>
                       </Col>
                       <Col xs={12}>
                         <button className="btn btn-primary">
-                          Submit
+                          Надіслати
                         </button>
                       </Col>
                     </Row>

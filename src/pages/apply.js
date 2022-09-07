@@ -17,11 +17,10 @@ export default function Apply() {
             <Row>
               <Col xs={12}>
                 <h1>
-                  Apply for positon
+                  Відгукнутись на вакансію
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam.
+                  Будь-ласка, заповніть детально форму нижче, щоб подати зявку на працевлаштування.
                 </p>
               </Col>
             </Row>
@@ -30,67 +29,69 @@ export default function Apply() {
         <section className="application">
           <Container>
             <Row className="justify-content-center">
-              <Col lg={5}>
-                <form action="#">
-                  <Row className="gy-4">
-                    <Col xs={12}>
-                      <label htmlFor="name">
-                        Full name
-                      </label>
-                      <input type="text" className="form-control" name="name" placeholder="Alexander McKinsey"/>
-                    </Col>
-                    <Col xs={12}>
-                      <label htmlFor="email">
-                        E-mail
-                      </label>
-                      <input type="text" className="form-control" name="email"
-                             placeholder="careers@ak-inverstment.pl"/>
-                    </Col>
-                    <Col xs={12}>
-                      <label htmlFor="phone">
-                        Contact phone
-                      </label>
-                      <input type="text" className="form-control" name="phone" placeholder="+38 (000) 00 00 000"/>
-                    </Col>
-                    <Col xs={12}>
-                      <label htmlFor="phone">
-                        Choose position
-                      </label>
-                      <select className="form-select" name="position">
-                        <option selected disabled>
-                          Select from the list
-                        </option>
-                        <option value="electrician">
-                          Electrician
-                        </option>
-                        <option value="electrician">
-                          Electrician
-                        </option>
-                        <option value="electrician">
-                          Electrician
-                        </option>
-                        <option value="electrician">
-                          Electrician
-                        </option>
-                      </select>
-                    </Col>
-                    <Col xs={12}>
-                      <label htmlFor="phone">
-                        Upload your CV
-                      </label>
-                      <input className="form-control form-file" type="file" id="cv" />
-                    </Col>
-                    <Col xs={12}>
-                      <Row className="justify-content-center">
-                        <Col xs="auto">
-                          <button className="btn btn-primary btn-long">
-                            Apply
-                          </button>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </form>
+              <Col lg={6}>
+                <div className="shadow-container">
+                  <form action="#">
+                    <Row className="gy-4">
+                      <Col xs={12}>
+                        <label htmlFor="name">
+                          Повне ім&apos;я
+                        </label>
+                        <input type="text" className="form-control" name="name" placeholder="Alexander McKinsey"/>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="email">
+                          E-mail
+                        </label>
+                        <input type="text" className="form-control" name="email"
+                               placeholder="careers@ak-inverstment.pl"/>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="phone">
+                          Контактний телефон
+                        </label>
+                        <input type="text" className="form-control" name="phone" placeholder="+38 (000) 00 00 000"/>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="phone">
+                          Оберіть вакансію
+                        </label>
+                        <select className="form-select" name="position">
+                          <option selected disabled>
+                            Оберіть зі списку
+                          </option>
+                          <option value="electrician">
+                            Електрик
+                          </option>
+                          <option value="electrician">
+                            Електрик
+                          </option>
+                          <option value="electrician">
+                            Електрик
+                          </option>
+                          <option value="electrician">
+                            Електрик
+                          </option>
+                        </select>
+                      </Col>
+                      <Col xs={12}>
+                        <label htmlFor="phone">
+                          Ваше резюме (CV)
+                        </label>
+                        <input className="form-control form-file" type="file" id="cv" />
+                      </Col>
+                      <Col xs={12}>
+                        <Row className="justify-content-center">
+                          <Col xs="auto">
+                            <button className="btn btn-primary">
+                              Подати заявку
+                            </button>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </form>
+                </div>
               </Col>
             </Row>
           </Container>

@@ -1,3 +1,22 @@
 section.application {
   padding-bottom: 70px;
+
+  .shadow-container {
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    padding: 40px;
+    height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  section.application {
+    padding-bottom: 50px;
+
+    .shadow-container {
+      padding: 30px 20px;
+    }
+  }
 }

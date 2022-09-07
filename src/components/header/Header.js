@@ -9,7 +9,7 @@ function Header() {
   return (
     <header>
       <Container fluid>
-        <Row className="justify-content-center justify-content-lg-between">
+        <Row className="justify-content-between">
           <Col xs="auto">
             <Link href="/">
               <a>

@@ -28,8 +28,8 @@ function Footer() {
                       <Image src={PhoneIcon} width={18} height={18} alt="AK Investment – Phone Icon" />
                     </div>
                     <div className="block-title">
-                      <Link href="tel:+38 (000) 00 00 000">
-                        +38 (000) 00 00 000
+                      <Link href="tel:+48 (739) 441 878">
+                        +48 (739) 441 878
                       </Link>
                     </div>
                   </div>
@@ -38,8 +38,8 @@ function Footer() {
                       <Image src={EmailIcon} width={18} height={18} alt="AK Investment – Email Icon" />
                     </div>
                     <div className="block-title">
-                      <Link href="mailto:careers@ak-investment.com">
-                        careers@ak-investment.com
+                      <Link href="mailto:akinvestpolka@gmail.com">
+                        akinvestpolka@gmail.com
                       </Link>
                     </div>
                   </div>

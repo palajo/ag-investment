@@ -33,20 +33,11 @@ section.contacts {
   section.contacts {
     padding-bottom: 50px;
 
-    .contacts-container {
-      padding: 30px;
-
-      .contacts-blocks {
-        margin-top: 30px;
-      }
-
-      button {
-        margin: 50px 0 0;
-      }
+    .shadow-container {
+      padding: 30px 20px;
 
       .map-block {
-        margin-top: 50px;
-        height: 300px;
+        height: 250px;
       }
     }
   }
