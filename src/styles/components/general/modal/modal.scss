@@ -32,3 +32,13 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .modal {
+    .modal-dialog {
+      .modal-body {
+        padding: 20px;
+      }
+    }
+  }
+}
