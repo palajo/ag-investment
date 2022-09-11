@@ -2,16 +2,16 @@ import axios from 'axios';
 
 export const headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer af6d76b9af615d7488e7e64ff57c20ab80c0cc19d505219cddb11d88dde1ca8d9a73918e1e92a4d0ded397f3b8b9cf97d969c37c566e88f95487e4152dc1f54d94a41a98742e974264f2bc40e0e897f32e753ea6c545c294e2a910891425bf597b73fb9d8d9ef4b79bbde9e808b47b1c4defc509899d56b4c20f03cc0d44cf85'
+  'Authorization': 'Bearer e90fbda01a3bc912c937c65eb61aab9a42fa5969f0c565415681a60a57121e286e514a8ff6f1cc5cb149f9b3a84c1f2eecb4e7d6aefe80477bca1eb63c3a228d907b9d9b892148e2f8b6640ae21b2b95bf67a912da3abc7b938074889bc96977e88233f0ba2f1bb59531c50a3e2ea6af8e3311eedc57b4b2afc0885d824d1662'
 };
 
 export const fetchContent = async (path, headers) => {
-  const res = await axios.get(`http://localhost:1337/api/${path}`, headers);
+  const res = await axios.get(`https://api.ak-investment.pl/api/${path}`, headers);
   return res.data.data.attributes;
 };
 
 export const strapiImage = (url) => {
-  return `http://localhost:1337${url}`
+  return `https://api.ak-investment.pl${url}`
 }
 
 export const HomepageConfig = {
