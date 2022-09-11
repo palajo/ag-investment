@@ -1,6 +1,12 @@
 header {
   padding: 30px 30px 20px;
 
+  .logo {
+    position: relative;
+    height: 72px;
+    width: 100%;
+  }
+
   ul.header-contacts {
     display: flex;
     flex-direction: column;
@@ -13,6 +19,7 @@ header {
 
       a {
         font-size: 14px;
+        line-height: 24px;
       }
     }
   }

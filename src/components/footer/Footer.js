@@ -2,12 +2,9 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
+import { strapiImage } from '../../api';
 
-import LogoWhite from '../../images/logo-2-white.svg';
-import PhoneIcon from '../../images/icons/phone.svg';
-import EmailIcon from '../../images/icons/email.svg';
-
-function Footer() {
+function Footer({ data }) {
   return (
     <footer>
       <Container>
@@ -15,7 +12,8 @@ function Footer() {
           <Col xs="auto">
             <Link href="/">
               <a>
-                <Image src={LogoWhite} alt="AK Investment – Logo" height={72} objectFit="contain" objectPosition="left" />
+                <Image src={strapiImage(data.LogoWhite.data.attributes.url)} layout="fixed" height={72} width={120}
+                       objectFit="contain" objectPosition="left" alt="icon" />
               </a>
             </Link>
           </Col>
@@ -23,26 +21,30 @@ function Footer() {
             <Row>
               <Col xs={12}>
                 <div className="contacts-blocks">
-                  <div className="contacts-block">
-                    <div className="block-icon">
-                      <Image src={PhoneIcon} width={18} height={18} alt="AK Investment – Phone Icon" />
+                  {data.FooterContacts.Contact.map((contact, index) => (
+                    <div className="contacts-block" key={index}>
+                      <div className="block-icon">
+                        <Image src={strapiImage(contact.Icon.data.attributes.url)} layout="fixed" width={18} height={18} alt="icon" />
+                      </div>
+                      <div className="block-title">
+                        {
+                          contact.Type === 'Phone' ? (
+                            <Link href={`tel:${contact.Text}`}>
+                              {contact.Text}
+                            </Link>
+                          ) : contact.Type === 'Email' ? (
+                            <Link href={`mailto:${contact.Text}`}>
+                              {contact.Text}
+                            </Link>
+                          ) : (
+                            <Link href="#">
+                              {contact.Text}
+                            </Link>
+                          )
+                        }
+                      </div>
                     </div>
-                    <div className="block-title">
-                      <Link href="tel:+48 (739) 441 878">
-                        +48 (739) 441 878
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="contacts-block">
-                    <div className="block-icon">
-                      <Image src={EmailIcon} width={18} height={18} alt="AK Investment – Email Icon" />
-                    </div>
-                    <div className="block-title">
-                      <Link href="mailto:akinvestpolka@gmail.com">
-                        akinvestpolka@gmail.com
-                      </Link>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </Col>
             </Row>
@@ -52,7 +54,7 @@ function Footer() {
         <Row>
           <Col xs="auto">
             <p className="copyright">
-              © Copyright 2022 — AK Investment. All rights Reserved.
+              {data.Copyright}
             </p>
           </Col>
         </Row>

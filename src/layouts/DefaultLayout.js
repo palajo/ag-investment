@@ -3,14 +3,14 @@ import React from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
-function DefaultLayout({ children }) {
+function DefaultLayout({ children, data }) {
   return (
     <>
-      <Header />
+      <Header data={data} />
       <main>
         {children}
       </main>
-      <Footer />
+      <Footer data={data}/>
     </>
   );
 }

@@ -3,9 +3,9 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Logo from '../../images/logo-2.svg';
+import { strapiImage } from '../../api';
 
-function Header() {
+export default function Header({ data }) {
   return (
     <header>
       <Container fluid>
@@ -13,27 +13,32 @@ function Header() {
           <Col xs="auto">
             <Link href="/">
               <a>
-                <Image src={Logo} alt="AK Investment – Logo" height={72} objectFit="contain" objectPosition="left" />
+                <Image src={strapiImage(data.Logo.data.attributes.url)} layout="fixed" height={72} width={120}
+                       objectFit="contain" objectPosition="left" alt="icon" />
               </a>
             </Link>
           </Col>
           <Col xs="auto" className="d-none d-lg-block">
             <ul className="header-contacts">
-              <li>
-                <Link href="#">
-                  Gdansk, Poland
-                </Link>
-              </li>
-              <li>
-                <Link href="tel:+48 (739) 441 878">
-                  +48 (739) 441 878
-                </Link>
-              </li>
-              <li>
-                <Link href="mailto:akinvestpolka@gmail.com">
-                  akinvestpolka@gmail.com
-                </Link>
-              </li>
+              {data.HeaderContacts.Contact.map((contact, index) => (
+                <li key={index}>
+                  {
+                    contact.Type === 'Phone' ? (
+                      <Link href={`tel:${contact.Text}`}>
+                        {contact.Text}
+                      </Link>
+                    ) : contact.Type === 'Email' ? (
+                      <Link href={`mailto:${contact.Text}`}>
+                        {contact.Text}
+                      </Link>
+                    ) : (
+                      <Link href="#">
+                        {contact.Text}
+                      </Link>
+                    )
+                  }
+                </li>
+              ))}
             </ul>
           </Col>
         </Row>
@@ -41,5 +46,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
