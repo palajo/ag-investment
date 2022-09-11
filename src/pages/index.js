@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { fetchContent, HomepageConfig, GeneralConfig, strapiImage } from '../api';
 
 import MapPlaceholder from '../images/map/placeholder.jpg';
+import PositionModal from '../components/modals/PositionModal';
 
 export default function Home({ data, general }) {
   // swiper arrows
@@ -43,6 +44,8 @@ export default function Home({ data, general }) {
   const handleShowAllText = () => {
     return showAllText ? setShowAllText(false) : setShowAllText(true);
   }
+
+  console.log(data);
 
   return (
     <>
@@ -83,7 +86,7 @@ export default function Home({ data, general }) {
               </Col>
               <Col lg={8}>
                 <Row className="gy-4">
-                  {data.Vacancies.Vacancies.data.map((vacancy, index) => (
+                  {data.Vacancies.Vacancies.data.slice(0, showPositions).map((vacancy, index) => (
                     <Col xs={12} key={index}>
                       <div className="position-block">
                         <div className="block-title">
@@ -112,9 +115,10 @@ export default function Home({ data, general }) {
                         </div>
                         <div className="block-description">
                           <p dangerouslySetInnerHTML={{__html: vacancy.attributes.ShortDescription}} />
-                          <a className="link-with-arrow arrow-down">
-                            {vacancy.attributes.ButtonDetails}
-                          </a>
+                          <PositionModal
+                            data={vacancy.attributes}
+                            buttonTitle={vacancy.attributes.ButtonDetails}
+                          />
                         </div>
                         <div className="block-actions">
                           <Link href="/apply">
@@ -133,7 +137,7 @@ export default function Home({ data, general }) {
                   <Col xs="auto">
                     <button
                       className={`btn btn-primary ${showPositions > 2 ? `btn-arrow-up` : `btn-arrow-down`}`}
-                      onClick={() => handleShowAllPositions(8)}
+                      onClick={() => handleShowAllPositions(data.Vacancies.Vacancies.data.length)}
                     >
                       {showPositions > 2 ? data.Vacancies.ButtonHide : data.Vacancies.Button}
                     </button>
