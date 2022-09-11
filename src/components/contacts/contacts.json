@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contacts_contacts",
+  "info": {
+    "displayName": "Contacts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Contact": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact"
+    }
+  }
+}

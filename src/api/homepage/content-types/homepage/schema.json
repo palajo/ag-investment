@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroBanner": {
+      "displayName": "HeroBanner",
+      "type": "component",
+      "repeatable": false,
+      "component": "hero-banner.hero-banner"
+    },
+    "Vacancies": {
+      "displayName": "Vacancies",
+      "type": "component",
+      "repeatable": false,
+      "component": "vacancies.vacancies"
+    },
+    "Slider": {
+      "displayName": "Slider",
+      "type": "component",
+      "repeatable": false,
+      "component": "slider.slider"
+    },
+    "About": {
+      "displayName": "About",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.about"
+    },
+    "Partners": {
+      "displayName": "Partners",
+      "type": "component",
+      "repeatable": false,
+      "component": "partners.partners"
+    },
+    "EmploymentSteps": {
+      "displayName": "EmploymentSteps",
+      "type": "component",
+      "repeatable": false,
+      "component": "employment-steps.employment-steps"
+    },
+    "Contacts": {
+      "displayName": "Contacts",
+      "type": "component",
+      "repeatable": false,
+      "component": "contacts.contacts"
+    },
+    "Callback": {
+      "type": "component",
+      "repeatable": false,
+      "component": "callback.callback"
+    }
+  }
+}

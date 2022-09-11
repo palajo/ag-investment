@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_header_contacts_header_contacts",
+  "info": {
+    "displayName": "HeaderContacts"
+  },
+  "options": {},
+  "attributes": {
+    "Contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact"
+    }
+  }
+}

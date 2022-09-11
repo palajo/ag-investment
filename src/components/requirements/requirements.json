@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_requirements_requirements",
+  "info": {
+    "displayName": "Requirements"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Punct": {
+      "type": "component",
+      "repeatable": true,
+      "component": "punct.punct"
+    }
+  }
+}

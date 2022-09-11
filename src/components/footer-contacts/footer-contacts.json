@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_footer_contacts_footer_contacts",
+  "info": {
+    "displayName": "FooterContacts"
+  },
+  "options": {},
+  "attributes": {
+    "Contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.contact"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vacancies",
+  "info": {
+    "singularName": "vacancy",
+    "pluralName": "vacancies",
+    "displayName": "Vacancies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Benefits": {
+      "displayName": "Benefits",
+      "type": "component",
+      "repeatable": true,
+      "component": "benefits.benefits"
+    },
+    "ShortDescription": {
+      "type": "richtext"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Offer": {
+      "displayName": "Offer",
+      "type": "component",
+      "repeatable": false,
+      "component": "offer.offer"
+    },
+    "Requirements": {
+      "displayName": "Requirements",
+      "type": "component",
+      "repeatable": false,
+      "component": "requirements.requirements"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "ButtonDetails": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

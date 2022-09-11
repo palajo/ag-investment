@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_punct_puncts",
+  "info": {
+    "displayName": "Punct"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_callback_callbacks",
+  "info": {
+    "displayName": "Callback"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Button": {
+      "type": "string"
+    }
+  }
+}

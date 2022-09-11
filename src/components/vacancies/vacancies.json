@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_vacancies_vacancies",
+  "info": {
+    "displayName": "Vacancies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Vacancies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vacancy.vacancy"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "ButtonHide": {
+      "type": "string"
+    }
+  }
+}

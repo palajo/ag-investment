@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_offer_offers",
+  "info": {
+    "displayName": "Offer"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Punct": {
+      "displayName": "Punct",
+      "type": "component",
+      "repeatable": true,
+      "component": "punct.punct"
+    }
+  }
+}

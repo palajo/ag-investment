@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_employment_steps_employment_steps",
+  "info": {
+    "displayName": "EmploymentSteps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Step": {
+      "displayName": "Steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "steps.steps"
+    }
+  }
+}

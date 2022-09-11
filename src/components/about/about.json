@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_abouts",
+  "info": {
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "ButtonHide": {
+      "type": "string"
+    }
+  }
+}
