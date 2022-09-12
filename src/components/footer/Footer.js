@@ -69,11 +69,18 @@ function Footer({ data }) {
             </Col>
           </Row>
           <hr />
-          <Row>
+          <Row className="justify-content-between">
             <Col xs="auto">
               <p className="copyright">
                 {data.Copyright}
               </p>
+            </Col>
+            <Col xs="auto">
+              <Link href="/privacy-policy">
+                <a className="privacy-policy-link">
+                  Privacy Policy
+                </a>
+              </Link>
             </Col>
           </Row>
         </Container>
