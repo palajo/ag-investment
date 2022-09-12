@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Link from 'next/link';
 import Image from 'next/image';
 import { strapiImage } from '../../api';
+import Script from 'next/script';
 
 function Footer({ data }) {
   return (

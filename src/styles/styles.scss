@@ -24,19 +24,19 @@
 
 // -- -- -- -- -- homepage
 // -- sections
-@import './components/pages/homepage/sections/hero-banner';
-@import './components/pages/homepage/sections/opened-positions';
-@import './components/pages/homepage/sections/wide-slider';
-@import './components/pages/homepage/sections/double-section';
-@import './components/pages/homepage/sections/steps';
-@import './components/pages/homepage/sections/contacts';
+@import './components/sections/hero-banner';
+@import './components/sections/opened-positions';
+@import './components/sections/wide-slider';
+@import './components/sections/double-section';
+@import './components/sections/steps';
+@import './components/sections/contacts';
 
 // -- blocks
-@import './components/pages/homepage/blocks/vacancy';
-@import './components/pages/homepage/blocks/step';
-@import './components/pages/homepage/blocks/contacts';
-@import './components/pages/homepage/blocks/position';
+@import './components/blocks/vacancy';
+@import './components/blocks/step';
+@import './components/blocks/contacts';
+@import './components/blocks/position';
 
 // -- -- -- -- -- apply
 // -- sections
-@import './components/pages/apply/sections/application';
+@import './components/sections/application';

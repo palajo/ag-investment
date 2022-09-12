@@ -23,6 +23,74 @@ header {
       }
     }
   }
+
+  .burgermenu-toggle {
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    .title {
+      color: $black;
+      font-weight: 500;
+    }
+
+    .icon {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .line {
+        width: 30px;
+        height: 3px;
+
+        border-radius: 7px;
+
+        background: $black;
+      }
+    }
+  }
+}
+
+.burgermenu {
+  position: fixed;
+  z-index: 99;
+
+  top: 0;
+  right: -300px;
+
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+
+  background: $white;
+
+  padding: 20px 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s ease;
+
+  .close-icon {
+    cursor: pointer;
+  }
+
+  ul.nav {
+    li.nav-item {
+      a.nav-link {
+        padding: 8px 15px;
+
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        color: $black;
+      }
+    }
+  }
+
+  &.active {
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {

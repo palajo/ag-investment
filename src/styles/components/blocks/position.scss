@@ -6,6 +6,7 @@
 
   padding: 20px;
   border: 1px solid $lightgray;
+  background: $white;
 
   .block-title {
     display: flex;
@@ -79,6 +80,24 @@
 
     .btn {
       height: 40px;
+
+      &.btn-primary {
+        background: $white;
+        color: $black;
+
+        &::before {
+          background: $black;
+        }
+
+        &:hover {
+          background: $black;
+          color: $white;
+
+          &::before {
+            background: $white;
+          }
+        }
+      }
     }
   }
 }

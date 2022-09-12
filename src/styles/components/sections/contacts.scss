@@ -22,10 +22,17 @@ section.contacts {
   }
 
   .map-block {
-    position: relative;
+    filter: grayscale(1);
+    transition: 0.3s ease;
 
-    height: 300px;
-    width: 100%;
+    &:hover {
+      filter: grayscale(0);
+    }
+
+    iframe {
+      height: 300px;
+      width: 100%;
+    }
   }
 }
 
@@ -37,7 +44,9 @@ section.contacts {
       padding: 30px 20px;
 
       .map-block {
-        height: 250px;
+        iframe {
+          height: 250px;
+        }
       }
     }
   }
