@@ -3,6 +3,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import { Col, Row } from 'react-bootstrap';
+import Router from 'next/router';
 
 function Callback(props) {
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -34,7 +35,8 @@ function Callback(props) {
           setSubmitSuccess(true);
           setTimeout(() => {
             setSubmitSuccess(false);
-          }, 10000);
+            Router.push('/thank-you');
+          }, 2000);
         });
       }}
     >

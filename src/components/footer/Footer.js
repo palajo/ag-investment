@@ -85,6 +85,7 @@ function Footer({ data }) {
           </Row>
         </Container>
       </footer>
+
       <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-QZRJV9EX2B" />
       <Script strategy="lazyOnload" id="gtag">
         {`
@@ -92,6 +93,16 @@ function Footer({ data }) {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-QZRJV9EX2B', { page_path: window.location.pathname });
+        `}
+      </Script>
+
+      <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=UA-240948004-1" />
+      <Script strategy="lazyOnload" id="gtag">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-240948004-1', { page_path: window.location.pathname });
         `}
       </Script>
     </>

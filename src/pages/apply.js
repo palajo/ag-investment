@@ -9,6 +9,7 @@ import * as Yup from 'yup';
 import axios from 'axios';
 import emailjs from 'emailjs-com';
 import Pixel from '../components/facebook/Pixel';
+import Router from 'next/router';
 
 
 export default function Apply({ data, general }) {
@@ -68,7 +69,8 @@ export default function Apply({ data, general }) {
                         setSubmitSuccess(true);
                         setTimeout(() => {
                           setSubmitSuccess(false);
-                        }, 10000);
+                          Router.push('/thank-you');
+                        }, 2000);
                       });
                     }}
                   >
