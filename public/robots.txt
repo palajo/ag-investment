@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ak-investment.pl
+
+# Sitemaps
+Sitemap: https://ak-investment.pl/sitemap.xml
