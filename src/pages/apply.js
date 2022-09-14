@@ -187,12 +187,12 @@ export default function Apply({ data, general }) {
                             </div>
                           </Col>
                           <Col xs={12}>
-                            <label htmlFor="phone">
+                            <label htmlFor="experience">
                               Опыт работы
                             </label>
                             <select
                               className="form-select"
-                              name="vacancy"
+                              name="experience"
                               onChange={handleChange}
                               onBlur={handleBlur}
                               value={values.experience}
