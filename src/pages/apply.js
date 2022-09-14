@@ -48,13 +48,15 @@ export default function Apply({ data, general }) {
                       email: '',
                       phone: '',
                       vacancy: '',
+                      experience: '',
                     }}
                     validationSchema={
                       Yup.object().shape({
-                        fullname: Yup.string().required(`Обов'язкове поле`),
-                        email: Yup.string().required(`Обов'язкове поле`),
-                        phone: Yup.string().required(`Обов'язкове поле`),
-                        vacancy: Yup.string().required(`Обов'язкове поле`),
+                        fullname: Yup.string().required(`Обязательное поле`),
+                        email: Yup.string().required(`Обязательное поле`),
+                        phone: Yup.string().required(`Обязательное поле`),
+                        vacancy: Yup.string().required(`Обязательное поле`),
+                        experience: Yup.string().required(`Обязательное поле`),
                       })
                     }
 
@@ -182,6 +184,40 @@ export default function Apply({ data, general }) {
                             </select>
                             <div className="form-error">
                               {errors.vacancy && touched.vacancy && errors.vacancy}
+                            </div>
+                          </Col>
+                          <Col xs={12}>
+                            <label htmlFor="phone">
+                              Опыт работы
+                            </label>
+                            <select
+                              className="form-select"
+                              name="vacancy"
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              value={values.experience}
+                            >
+                              <option selected disabled value="">
+                                Выберите со списка
+                              </option>
+                              <option value="Нету">
+                                Нету
+                              </option>
+                              <option value="Меньше 1 года">
+                                Меньше 1 года
+                              </option>
+                              <option value="От 1 до 3 лет">
+                                От 1 до 2 лет
+                              </option>
+                              <option value="От 3 до 5 лет">
+                                От 3 до 5 лет
+                              </option>
+                              <option value="5 лет и больше">
+                                5 лет и больше
+                              </option>
+                            </select>
+                            <div className="form-error">
+                              {errors.experience && touched.experience && errors.experience}
                             </div>
                           </Col>
                           <Col xs={12}>
