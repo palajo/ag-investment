@@ -152,23 +152,23 @@ export default function Apply({ data, general }) {
                               <option selected disabled value="">
                                 Выберите со списка
                               </option>
-                              <option value="Електрик">
-                                Електрик
+                              <option value="Шлифовщик-ламиновщик">
+                                Шлифовщик-ламиновщик
                               </option>
-                              <option value="Плотник">
-                                Плотник
+                              <option value="Электрик">
+                                Электрик
                               </option>
-                              <option value="Обойщик">
-                                Обойщик
+                              <option value="Столяр">
+                                Столяр
                               </option>
                               <option value="Лакировщик">
                                 Лакировщик
                               </option>
-                              <option value="Водопроводчик">
-                                Водопроводчик
+                              <option value="Обойщик">
+                                Обойщик
                               </option>
-                              <option value="Инженер-шлифовщик">
-                                Инженер-шлифовщик
+                              <option value="Гидравлик">
+                                Гидравлик
                               </option>
                               <option value="Установщик стекл">
                                 Установщик стекл
