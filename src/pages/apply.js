@@ -53,7 +53,6 @@ export default function Apply({ data, general }) {
                     validationSchema={
                       Yup.object().shape({
                         fullname: Yup.string().required(`Обязательное поле`),
-                        email: Yup.string().required(`Обязательное поле`),
                         phone: Yup.string().required(`Обязательное поле`),
                         vacancy: Yup.string().required(`Обязательное поле`),
                         experience: Yup.string().required(`Обязательное поле`),
